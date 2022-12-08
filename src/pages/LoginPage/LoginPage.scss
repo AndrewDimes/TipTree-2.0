@@ -1,0 +1,56 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.login-page {
+  height: 100vh;
+  @include flex(column, center);
+
+  .login-page__header {
+    @include flex(column, center);
+    img {
+      height: 100px;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-family: $main-font;
+      color: $neon-02-2-hex;
+    }
+  }
+
+  form {
+    @include flex(column, center);
+    width: 450px;
+    padding: 2rem;
+    border-radius: 10px;
+
+    input {
+      width: 90%;
+      border: none;
+      border-radius: 30px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      outline: none;
+      background-color: white;
+      &::placeholder {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+      }
+    }
+    button {
+      width: 90%;
+    }
+  }
+  small {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    span {
+      color: $neon-02-2-hex;
+      margin-left: 0.2rem;
+      transition: 0.3s ease;
+      &:hover {
+        color: $neon-02-5-hex;
+      }
+    }
+  }
+}
